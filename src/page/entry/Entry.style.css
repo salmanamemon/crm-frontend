@@ -1,0 +1,13 @@
+.entry-page{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-box{
+    padding: 20px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+}
+.form-box input{
+    margin-bottom: 10px;
+}
