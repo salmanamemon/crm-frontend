@@ -2,13 +2,14 @@ import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import TicketTable from "../../components/ticket-table/TicketTable.comp";
+import { PageBreadCrumb } from "../../components/breadcrumb/PageBreadCrumb.comp";
 
 const Dashboard = () => {
     return(
         <Container>
             <Row>
                 <Col>
-                PageBreadcrumb 
+                    <PageBreadCrumb page="Dashboard"/> 
                 </Col>
             </Row>
             <Row>
