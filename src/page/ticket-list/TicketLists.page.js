@@ -17,7 +17,6 @@ export const TicketLists = () => {
 
   const handleOnChange = (e) => {
     const { value } = e.target;
-    //console.log(value);
     setStr(value);
     searchTicket(value);
   }
