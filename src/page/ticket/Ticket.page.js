@@ -1,13 +1,25 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Button, Spinner, Alert } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { PageBreadCrumb } from "../../components/breadcrumb/PageBreadCrumb.comp";
 import { MessageHistory } from "../../components/message-history/MessageHistory.comp";
 import tickets from "../../assets/data/dummy-tickets.json";
 import { UpdateTicket } from "../../components/update-ticket/UpdateTicket.comp";
 
+const ticket = tickets[0];
 
 export const Ticket = () => {
-	const ticket = tickets[0];
+
+	const [message, setMessage] = useState('');
+
+	useEffect(() => {}, [message]);
+
+	const handleOnChange = (e) => {
+		setMessage(e.target.value)
+	}
+
+	const handleOnSubmit = (e) => {
+		alert('Messge submitted successfully')
+	}
 	return (
 		<Container>
 			<Row>
@@ -34,7 +46,7 @@ export const Ticket = () => {
 			<hr />
 			<Row className="mt-4">
 				<Col>
-					<UpdateTicket />
+					<UpdateTicket msg={message} handleOnChange={handleOnChange} handleOnSubmit={handleOnSubmit}/>
 				</Col>
 			</Row>
 
