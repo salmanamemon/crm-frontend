@@ -9,6 +9,9 @@
 header{
     grid-area: header;
 }
+header .navWrapper a{
+    color: #ffffff;
+}
 main{
     grid-area: main;
     min-height: 78.41vh;
